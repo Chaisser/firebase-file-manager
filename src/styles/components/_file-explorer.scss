@@ -1,0 +1,141 @@
+.file-explorer {
+  background: white;
+  border: 1px solid white;
+  position: relative;
+  display: block;
+  left: 50px;
+  top: 40px;
+  width: 80vw;
+  height: 600px;
+}
+
+.file-explorer--topbar {
+  display: flex;
+  justify-content: space-between;
+  padding: $xs-size;
+
+  div {
+    display: flex;
+    justify-content: space-evenly;
+    span {
+      padding: 0 $s-size;
+    }
+  }
+}
+
+.header-icon {
+  &::after {
+    content: "| " attr(data-title);
+    padding: 0 $s-size;
+    color: $dark-grey;
+    font-size: $s-size;
+  }
+}
+
+.file-explorer--menu {
+  border-bottom: 1px solid #dadbdc;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  nav {
+    ul {
+      list-style: none;
+      line-height: $m-size;
+      padding: 0;
+      margin: 0;
+      li {
+        font-size: $s-size;
+        border: 1px solid white;
+        display: inline-block;
+        padding: 2px $xs-size 0 $xs-size;
+        cursor: pointer;
+        &:hover {
+          border: 1px solid $light-grey;
+        }
+      }
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.active-menu {
+  background: $blue;
+  border: 1px solid $blue !important;
+  color: white;
+}
+
+.file-explorer--actions {
+  margin-top: $xs-size;
+  display: flex;
+  justify-content: space-between;
+  div {
+    display: flex;
+    padding: 0 $xs-size;
+
+    &:nth-child(2) {
+      border: 1px solid #d9d9d9;
+      font-size: $s-size;
+      align-items: center;
+      text-align: left;
+      flex-grow: 1;
+      padding: 0 $s-size;
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        li {
+          display: inline-block;
+
+          border: 1px solid white;
+          padding: 1px 3px;
+          font-size: 12px;
+          &::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            margin-right: $xs-size;
+            display: inline-block;
+            background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' focusable='false' data-prefix='fas' data-icon='angle-right' class='svg-inline--fa fa-angle-right fa-w-8' role='img' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 512'%3E%3Cpath fill='%23808080' d='M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z'%3E%3C/path%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+          }
+          &:hover {
+            background: #e5f3ff;
+            border: 1px solid #cce8ff;
+          }
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      position: relative;
+    }
+
+    span {
+      width: 30px;
+      text-align: center;
+    }
+  }
+}
+
+.file-explorer--body {
+  height: calc(100% - 115px);
+  display: flex;
+  overflow: hidden;
+}
+.file-explorer--sidebar {
+  padding: $xs-size;
+  width: 160px;
+  background: white;
+  overflow: hidden;
+  border-right: 1px solid #f7f7f7;
+}
+.file-explorer--main {
+  padding: $xs-size;
+  background: white;
+  flex-grow: 1;
+  overflow: hidden;
+}

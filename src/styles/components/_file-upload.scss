@@ -1,0 +1,43 @@
+.file-upload {
+  position: absolute;
+  bottom: 0;
+  left: 50px;
+  min-height: 100px;
+  background: white;
+  width: 350px;
+  padding: $m-size;
+  padding-bottom: 55px;
+}
+.file-upload--header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.file-upload--title {
+  font-size: $s-size;
+  font-weight: 600;
+}
+
+.list--uploadFiles {
+  display: flex;
+  justify-content: space-between;
+}
+.uploadFiles--title {
+  font-size: $s-size;
+  margin-bottom: $s-size;
+}
+
+.dropzone {
+  border: 2px dotted $blue;
+  padding: $s-size;
+  height: 100px;
+  text-align: center;
+}
+
+.dropzone__active {
+  border: 2px dotted $green;
+  background: lighten($green, 20);
+  padding: $s-size;
+  height: 100px;
+  text-align: center;
+}

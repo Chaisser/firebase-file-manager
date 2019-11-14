@@ -1,0 +1,28 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  > * {
+    margin-bottom: $m-size;
+  }
+}
+
+.form__error {
+  margin: 0 0 $m-size 0;
+  font-style: italic;
+  color: red;
+}
+
+.file-loader {
+  position: fixed;
+  bottom: -20px;
+  left: 0;
+  width: 0px;
+  background: $green;
+  height: 20px;
+}
+
+.form--search {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,67 @@
+.footer-container {
+  justify-content: space-between;
+  background: $footer-continer-background;
+  display: flex;
+  height: 40px;
+  padding: $xs-size $s-size;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.footer-container--icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.taskbar-icon {
+  min-width: 50px;
+  display: inline-block;
+}
+
+.footer-container--meta {
+  display: flex;
+  flex-direction: row;
+}
+.date-time-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: 200;
+  line-height: $m-size;
+  padding: 0 $s-size;
+  text-align: center;
+}
+
+.date-time-container--time {
+  color: white;
+  font-size: $s-size;
+}
+
+.date-time-container--date {
+  color: white;
+  font-size: $s-size;
+}
+
+.notifications-container {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 0 $s-size;
+}
+
+.notifications--label {
+  background: linear-gradient(rgba(51, 51, 51, 0.74), #111);
+  border: 1px solid #f4f4f4;
+  border-radius: 50%;
+  bottom: 2px;
+  color: white;
+  font-size: $s-size;
+  height: 18px;
+  position: absolute;
+  right: 3px;
+  text-align: center;
+  width: 18px;
+}

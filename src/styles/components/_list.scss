@@ -1,0 +1,78 @@
+.list--file {
+  padding: 0;
+  margin: 0;
+  li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 22px;
+    span {
+      a {
+        text-decoration: none;
+        color: $dark-grey;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &:first-child {
+        width: 1250px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        color: $dark-grey;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      &:last-child {
+        width: 250px;
+      }
+      color: #666;
+      font-size: $s-size;
+      width: 100%;
+      text-align: left;
+      border: 1px solid white;
+    }
+
+    &:hover :not(.button--sort) {
+      background: #f7f7f7;
+      border-color: #f7f7f7;
+    }
+  }
+}
+
+.button--sort {
+  color: #666;
+  &:hover {
+    cursor: pointer;
+    background: #e5f3ff;
+    border: 1px solid #cce8ff;
+  }
+}
+
+.list--sidebar {
+  padding-left: 10px;
+  margin: 0;
+  li {
+    display: flex;
+    justify-content: space-between;
+    span {
+      &:first-child {
+        color: #444;
+      }
+      color: #666;
+      font-size: $s-size;
+      width: 100%;
+      text-align: left;
+      border: 1px solid white;
+    }
+
+    &:hover :not(.button--sort) {
+      background: #f7f7f7;
+    }
+  }
+}
+.sidebar--title {
+  color: #666;
+  font-size: 12px;
+}
